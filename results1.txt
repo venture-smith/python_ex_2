@@ -1,0 +1,13 @@
+(base) C:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X> cd "c:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X" && cmd /C "C:\ProgramData\Anaconda3\python.exe c:\Users\vince\.vscode\extensions\ms-python.python-2020.5.80290\pythonFiles\lib\python\debugpy\wheels\debugpy\launcher 58483 -- "c:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X\python_ex_2\ex_2_task_1.py" "
+charding@iastate.edu *** NO ERRORS ***
+chris.edu - ERROR: INVALID ADDRESS: Must have exactly one Ampersand (&), CODE: 1
+chris@edu - ERROR: INVALID ADDRESS: Must have at least one period (.), CODE: 2
+@bla.edu - ERROR: INVALID ADDRESS: First part of address must be between 3 and 16 characters long, CODE: 5
+throatwobblermangrove@mpfc.org - ERROR: INVALID ADDRESS: First part of address must be between 3 and 16 characters long, CODE: 5
+chris@X.com - ERROR: INVALID ADDRESS: Second part of address must be between 2 nad 8 characters in long, CODE: 7
+chris.harding@iastate.edu - ERROR: INVALID ADDRESS: First part of address must be alpha numeric., CODE: 6
+chris@pymart.biz - ERROR: INVALID ADDRESS: Domain must be 'com', 'edu', 'org', or 'gov', CODE: 4
+chris@letsgo!.org *** NO ERRORS ***
+chris@megasavings.org - ERROR: INVALID ADDRESS: Second part of address must be between 2 nad 8 characters in long, CODE: 7
+tc@tank.com - ERROR: INVALID ADDRESS: First part of address must be between 3 and 16 characters long, CODE: 5
+zug@zug.bz - ERROR: INVALID ADDRESS: Must have a domain delimiter 3 characters from the right, CODE: 3

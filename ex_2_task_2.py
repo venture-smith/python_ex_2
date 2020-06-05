@@ -30,18 +30,18 @@
 
 # import your function from the previous .py file as a module (you can abbreviate it)
 # use ex_2_task_2 here instead once your function works!
-from ex_2_task_1_solution import is_valid_email_address as is_valid 
+from ex_2_task_1 import is_valid_email_address as is_valid 
 
 gave_up = False
 attempts_left = 3
 
 # your code - start
 while True:
-    email = input("email address?")
+    email = input("Enter your email address:")
     r, err_str = is_valid(email)
 
     if r == None:
-        print(email, "is valid!")
+        print(email, "Thank you! Valid email registered.")
         break
     
     # error
@@ -53,12 +53,16 @@ while True:
         print("No attempts left, bailing out")
         break
 
-    print(email, "is invalid!")
-    print("Reason:", err_str)
+    print(email, "is an invalid entry!")
+    # print("Reason:", err_str)      # The error codes and the messages are too draconian. Maybe we could give the user a gentler, more specific message
+    if r == 1:
+        print("Oops! Looks like you forgot to add an ampersand.")
+    elif r == 2 or r == 4:
+        print("Don't forget the period and the domain. Valid domains are 'com', 'edu', 'org', 'gov'")
     print(f"Try again, {attempts_left} attempts left")
 
 # your code - end
 if not gave_up:
-    print("valid email", email)
+    print("Thank you!", email)
 else:
-    print("invalid email", email)
+    print("Try again later", email)

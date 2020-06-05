@@ -1,0 +1,12 @@
+(base) C:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X> cd "c:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X" && cmd /C "C:\ProgramData\Anaconda3\python.exe c:\Users\vince\.vscode\extensions\ms-python.python-2020.5.80290\pythonFiles\lib\python\debugpy\wheels\debugpy\launcher 59051 -- "c:\Users\vince\Google Drive\My Education\Iowa State University\HCI584X\python_ex_2\ex_2_task_2.py" "
+Enter your email address:testytest.com
+testytest.com is an invalid entry!
+Oops! Looks like you forgot to add an ampersand.
+Try again, 2 attempts left
+Enter your email address:Testy@test.biz
+Testy@test.biz is an invalid entry!
+Don't forget the period and the domain. Valid domains are 'com', 'edu', 'org', 'gov'
+Try again, 1 attempts left
+Enter your email address:Test@test.org
+Test@test.org Thank you! Valid email registered.
+Thank you! Test@test.org

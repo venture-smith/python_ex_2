@@ -36,12 +36,44 @@
 
 def is_valid_email_address(s):
     
-    # your code here
+# Rule 1: Must have "@" and "." but only 1 "@"
+
+
+    NumAmp = s.count("@")
+    if NumAmp != 1: return 1, "INVALID ADDRESS: Must have exactly one Ampersand (&)"
+
+# Rule 2: Must have at least one period
+ 
+    NumPeriod = s.count(".")
+    if NumPeriod < 1: return 2, "INVALID ADDRESS: Must have at least one period (.)"
+
+# Rule 3: Must have "." 4 from the right
+
+    if s[-4] != ".": return 3, "INVALID ADDRESS: Must have a domain delimiter 3 characters from the right"
+
+# Rule 4: 3 chars on right must be = "com" "edu" "org" or "gov"   
+
+    if (s[-3::]) not in ["com", "edu", "org", "gov"]: return 4, "INVALID ADDRESS: Domain must be 'com', 'edu', 'org', or 'gov'"
+
+# Rule 5: First portion of address must be between 3 and 16 characters and alphanumeric
+
+    SpltString = s.split("@")
+    PartOne, PartTwo = SpltString[0], SpltString[1] # I couldn't figure this part out, so I had to peek at the solution
+    if len(PartOne) < 3 or len(PartOne) > 16: return 5, "INVALID ADDRESS: First part of address must be between 3 and 16 characters long" 
+    
+    if PartOne.isalnum() == False:
+        return 6, "INVALID ADDRESS: First part of address must be alpha numeric."
+
+# This is a bit of a cheat - assumes that last 4 characters are the period and extension
+    PartTwoCount = len(PartTwo) - 4
+    if PartTwoCount < 2 or PartTwoCount > 8: return 7, "INVALID ADDRESS: Second part of address must be between 2 nad 8 characters in long"
 
     
 
 
-    
+
+    return None, "*** NO ERRORS ***"
+
 
 # This if ensures that the following is NOT run if this file was imported as a module (which we'll do next!)
 if __name__ == "__main__":
@@ -58,6 +90,7 @@ if __name__ == "__main__":
         "chris@letsgo!.org",
         "chris@megasavings.org",
         "tc@tank.com",
+        "zug@zug.bz",
         ]
     # validate each email from the list
     for e in email_list:
@@ -65,6 +98,6 @@ if __name__ == "__main__":
         if r == None:
             print(e, s) # OK
         else:
-            print(f"{e} - error: {s}, error code: {r}") # Error
+            print(f"{e} - ERROR: {s}, CODE: {r}") # Error
 
         
